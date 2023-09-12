@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External Fonts</title>
+    <style>
+        @font-face {
+            font-family:'Goes';
+            src: url(fonts/OldLondon.ttf) format('truetype')
+            , url(fonts/Olondon_.otf) format('opentype');
+            /*
+            Format() Types 
+            - opentype (otf)
+            - truetype (ttf)
+            - embedded-opentype
+            - truetype-aat (Apple Advanced Typography)
+            */
+        }
+        h1 {
+            font-family: 'Goes';
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Hello, underworld!</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere illum laborum quasi modi nobis id cumque, eius eveniet sapiente quidem blanditiis architecto, ut voluptate velit repellendus dicta labore ullam doloremque.</p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 media</title>
+</head>
+<body>
+    <h1>Dinamic Image</h1>
+    <p>Try open this site in many different devices or simply increase or decrease your browser size</p>
+    <picture>
+        <source media="(max-width: 725px)" srcset="./Images/P.png" type="image/png"><!--source-media-type-->
+        <source media="(max-width: 1025px)" srcset="./Images/M.png" type="image/png"><!--Max-width:While the width isn't 1025, use the imagem M; Min-width: While the width isn't x use the image x-->
+        <img src="Images/G.png" alt="">
+    </picture>
+    <h1>Reproducing Audio</h1>
+    <p>Lets learn how to reproduce audios in HTML5</p>
+    <audio controls preload="none"><!--preload parameter: none(don't preload nothing), metadata(only data to read the media archive), auto(that will preload all archive)-->
+    <!-- In audio tag we can add sources tag: source:src to order what source we wish to load first.-->
+        <source src="Media/happy-mistake.mp3" type="audio/mpeg"><!--For mp3 files write the type as mpeg-->
+        <source src="Media/happy-mistake.ogg" type="audio/ogg">
+        <source src="Media/happy-mistake.wav" type="audio/wave">
+        <p>Unfortunally your browser isn't compatible with this type of media, but you <a href="Media/happy-mistake.mp3" download="happy-mistake.mp3">can download it here</a></p>
+    </audio>
+</body>
+</html>

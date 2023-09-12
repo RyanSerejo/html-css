@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible image</title>
+</head>
+<body>
+    <h1>Flexible image</h1>
+    <p>Are you seeing the complete image? Try to enlarge your window for the best experience</p>
+    <picture>
+        <source media="(max-width: 830px)" srcset="./media/pexels-img3.jpg" type="image/jpeg">
+        <source media="(max-width: 1230px)" srcset="./media/pexels-img2.jpg" type="image/jpeg">
+        <img src="./media/pexels-img1.jpg" alt="Imagem">
+    </picture>
+</body>
+</html>

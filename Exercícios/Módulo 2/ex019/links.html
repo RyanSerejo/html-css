@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Elements</title>
+    <style>
+        /*
+        Selectors
+        # = id
+        . = class
+        : = pseudo-class
+        :: = pseudo-element
+        > = children
+        */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a {
+            text-decoration: none;
+            color: #3ED0EB;
+        }
+        a:visited {
+            color: #1F1A70;
+        }
+        a:active {
+            color: #3ED0EB;
+        }
+        a:hover {
+            color: #DB488B;
+            text-decoration: underline;
+        }
+        .important:hover{
+            background-color: #1A0E3E;
+        }
+        .important::before {
+            content: '→';
+            text-decoration: none;
+        }
+        .important::after {
+            content: '←';
+            text-decoration: none;
+        }  
+        .important:hover::before {
+            content: '↪';
+            text-decoration: none;
+        }
+        .important:hover::after {
+            content: '↩';
+            text-decoration: none;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>Personalized Links</h1>
+        <ul>
+            <li>
+                <a href="https://www.w3schools.com/charsets/ref_utf_arrows.asp" target="_blank">Link a</a></li>
+            <li>
+                <a class="important" href="https://www.w3schools.com/charsets/ref_utf_arrows.asp" target="_blank">Link b</a></li>
+            <li>
+                <a href="https://www.w3schools.com/charsets/ref_utf_arrows.asp" target="_blank">Link c</a></li>
+        </ul>
+</body>
+</html>
