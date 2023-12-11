@@ -14,10 +14,20 @@
     <h1>
         My first form
     </h1>
-    <form action="">
-        <p>Name: <input type="text" name="name" id="name"></p>
-        <p>Sobrenome: <input type="text" name="sbrenome" id="sobrenome"></p>
+    <form action="seilaoq.php" autocomplete="off" method="post">
+        <label for="iname">
+            <p>Name:
+                <input type="text" name="name" id="iname"></p>
+        </label>
+        <p><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome"></p>
         <input type="submit" value="Send">
     </form>
 </body>
+
+<!--
+    É muito importante estudar https para criptografar os dados de formulários!
+    O parametro action do label chama o script
+    No label sempre usamos o id ao qual desejamos relacionar com outra tag
+-->
 </html>
