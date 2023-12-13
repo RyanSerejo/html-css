@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Form Example
+    </h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="iname"></label>
+                <input type="text" name="name" id="iname" autocomplete="name" minlength="4" maxlength="20">
+            </p>
+            <p>
+                <label for="iemail"></label>
+                <input type="email" name="email" id="iemail" required autocomplete="email">
+            </p>
+            <p>
+                <label for="itel"></label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" required placeholder="(xx)xxxx-xxxx" pattern="^\(\d{2}\)\d{4,5}-d{4}$">
+                <!--
+                    Estudar mais sobre RegEx (expressões regulares html5)
+                -->
+            </p>
+        </fieldset>
+        <input type="submit" value="Sent">
+        <input type="reset" value="Clean">
+    </form>
+</body>
+</html>
