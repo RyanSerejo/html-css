@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Form example
+    </h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <p>
+                <input type="radio" name="sex" id="msex" value="m"> <label for="msex">Masc</label> <br>
+                <input type="radio" name="sex" id="fsex" value="f"> <label for="fsex">Fem</label> 
+                <!--
+                    quando usar input do tipo radio só pode deixar marcado uma opção, para isso os input devem ter o mesmo atributo namem, no exemplo acima é "sex"
+                -->
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Favorite Sports</legend>
+            <p>
+                <input type="checkbox" name="basq" id="ibasq">
+                <label for="ibasq">Basquete</label>
+            </p>
+            <p>
+                <input type="checkbox" name="fut" id="ifut" checked>
+                <label for="ifut">Futbol</label>
+            </p>
+            <p>
+                <input type="checkbox" name="swim" id="iswim">
+                <label for="iswim">Swim</label>
+            </p>
+            <p>
+                <input type="checkbox" name="ten" id="iten">
+                <label for="iten">Tenis</label>
+            </p>
+        </fieldset>
+        <input type="submit" value="Sent">
+        <input type="reset" value="Clean">
+    </form>
+</body>
+</html>
