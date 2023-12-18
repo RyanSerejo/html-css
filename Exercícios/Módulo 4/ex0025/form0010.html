@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Form example
+    </h1>
+    <form action="cadastro.php">
+
+        <p>
+            <label for="iyear">When do you born?</label>
+            <input type="number" name="year" id="iyear" oninput="calcAge()">
+        </p>
+        <p>
+            <label for="result">Your age is:</label>
+            <output id="result">
+                0
+            </output>
+        </p>
+        <p>
+            <input type="submit" value="Sent">
+            <input type="reset" value="Clear">
+        </p>
+    </form>
+    <script>
+        function calcAge(){
+            let atual = new Date().getFullYear()
+            result.innerHTML = Number(atual) - Number(iyear.value)
+        }
+    </script>
+</body>
+</html>
