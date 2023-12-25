@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/*Todas as demais mídias*/
+
+@media print {
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body {
+        background-image: url(../../imagens/back-print.jpg);/*Desnecessário, não é possível imprimir backgrounds*/
+    }
+
+    main {
+        border: 2px solid black;
+        width: 90vw;
+    }
+    h1 { 
+        color: black;
+        text-shadow: none;
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita  através do site www.cursoemvideo.com, por Ryan, como atividade de estudo.';
+        text-decoration: overline;
+    }
+
+    /*Versão para impressoras*/
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    /*Vesão para tablets*/
+    body{
+        background-image: url(../../imagens/back-tablet.jpg);
+    }
+
+    #phone {display: none;}
+    #pc {display: none;}
+    #tablet {display: block;}
+    #print {display: none;}
+    #tv {display: none;}
+}
+
+@media screen and (min-width:992px) and (max-width:1200px){
+    body{
+        background-image: url(../../imagens/back-pc.jpg);
+    }
+
+    #phone {display: none;}
+    #pc {display: block;}
+    #tablet {display: none;}
+    #print {display: none;}
+    #tv {display: none;}
+    /*Versão para pc*/
+}
+
+@media screen and (min-width:1200px) {
+    body{
+        background-image: url(../../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 800px;
+    }
+
+    #phone {display: none;}
+    #pc {display: none;}
+    #tablet {display: none;}
+    #print {display: none;}
+    #tv {display: block;}
+    /*Versão para grandes telas*/
+}
