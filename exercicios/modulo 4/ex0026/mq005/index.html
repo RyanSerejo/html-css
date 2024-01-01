@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/media-query.css">
 
 </head>
-<body>
+<body onresize="changeWidth()">
     <header>
         <h1>My site</h1>
-        <span id="menu" class="material-symbols-outlined" onclick="openMenu()">menu</span>
+        <span id="burger" class="material-symbols-outlined" onclick="openMenu()">menu</span>
         <menu id="itens">
             <ul>
                 <li><a href="#">Opção 1</a></li>
@@ -41,13 +42,22 @@
         </article>
     </main>
     <script>
+
+        function changeWidth(){
+            if (window.innerWidth >= 768){
+               itens.style.display = 'block'
+            } else {
+               itens.style.display = 'none'
+            }
+        }
+
         function openMenu (){
             if (itens.style.display == 'none'){
                 itens.style.display = 'block'
-                document.querySelector("#menu").innerHTML = 'menu_open'
+                document.querySelector("#burger").innerHTML = 'menu_open'
             } else {
                 itens.style.display = 'none'
-                document.querySelector("#menu").innerHTML= 'menu'
+                document.querySelector("#burger").innerHTML= 'menu'
             }
         }
     </script>

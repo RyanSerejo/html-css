@@ -19,13 +19,13 @@ header h1 {
     text-align: center;
 }
 
-#menu {
+#burger {
     display: block;
     background-color: #2A8EEB;
     text-align: center;
     color: white;
 }
-#menu:hover {
+#burger:hover {
     background-color: white;
     color: #2A8EEB;
 }
